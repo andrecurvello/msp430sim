@@ -3,6 +3,6 @@
 
 #include "cpu.h"
 
-int bin_load(char * file, context_t *c);
+int bin_load(char *file, context_t *c, maddr_t a);
 
 #endif

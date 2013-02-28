@@ -15,6 +15,12 @@ main:
   mov.w #0x1212, &0x0200
   mov.w #0x01fe, R5
   mov.w 2(R5), R4
+  mov.w #0x0200, R6
+  mov.w 2(R5), 2(R6)
+  mov.w 2(R5), &0x0204 
+  mov.w R10, 4(R6) 
+  mov.w #0xabcd, 4(R6) 
+  mov.w &0x0200, 6(R6) 
 
 loop:
   jmp loop
@@ -35,5 +41,5 @@ vectors:
   dw 0
   dw 0
   dw 0
-  dw 0
+  dw main
   dw main 

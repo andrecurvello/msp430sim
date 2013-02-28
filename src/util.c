@@ -40,6 +40,10 @@ void util_printmem(context_t *c, int s, int e) {
 		de = a + e;
 		if(de > MAX_MEM) de = MAX_MEM;
 	}
+	else {
+		ds = s;
+		de = e;
+	}
 
 	printf("\n\nMemory Dump (%04x..%04x)\n-------------------------\n", ds,de);
 

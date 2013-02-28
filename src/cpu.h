@@ -6,7 +6,8 @@
 #define LOW_ENDIAN	1
 
 #define MAX_REG		16
-#define MAX_MEM		2048	
+#define MAX_MEM		0xFFFF	
+#define LOAD_ADDR	0xF800
 
 #define	REG_PC		0
 #define	REG_SP		1
@@ -32,6 +33,8 @@ typedef struct {
 	word_t 	reg[MAX_REG];
 	byte_t	mem[MAX_MEM];
 } context_t;
+
+void cpu_init(context_t *c);
 
 void cpu_reset(context_t *c);
 
